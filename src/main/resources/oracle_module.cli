@@ -1,0 +1,1 @@
+module add --name=com.oracle --resources=../../eaio-ng/m2/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar --dependencies=javax.api,javax.transaction.api
