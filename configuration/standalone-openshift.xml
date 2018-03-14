@@ -133,7 +133,7 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:bean-validation:1.0"/>
         <subsystem xmlns="urn:jboss:domain:datasources:5.0">
-           
+           <datasources>
   <xa-datasource jndi-name="java:/jdbc/kihub/oracle" pool-name="kihub">
     <xa-datasource-property name="ServerName">
       localhost
