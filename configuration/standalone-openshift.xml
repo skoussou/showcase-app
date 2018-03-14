@@ -405,9 +405,15 @@
         <jms-queue name="ExpiryQueue" entries="java:/jms/queue/ExpiryQueue"/>
         <jms-queue name="DLQ" entries="java:/jms/queue/DLQ"/>
 
+        <jms-queue name="prognose" entries="java:/jms/queue/prognose"/>
+        <jms-queue name="pplan" entries="java:/jms/queue/pplan"/>
+        <jms-topic name="event" entries="java:/jms/topic/event"/>
+
         <connection-factory name="InVmConnectionFactory" connectors="in-vm" entries="java:/ConnectionFactory"/>
         <connection-factory name="RemoteConnectionFactory" ha="true" block-on-acknowledge="true" reconnect-attempts="-1" connectors="http-connector" entries="java:jboss/exported/jms/RemoteConnectionFactory"/>
         <pooled-connection-factory name="activemq-ra" transaction="xa" connectors="in-vm" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory"/>
+        <pooled-connection-factory name="cfQueue" transaction="xa" entries="java:/cfQueue" connectors="in-vm"/>
+        <pooled-connection-factory name="cfTopic" transaction="xa" entries="java:/cfTopic" connectors="in-vm"/>
     </server>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:modcluster:3.0">
